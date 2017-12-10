@@ -1,0 +1,43 @@
+<div class="card mb-3">
+<div class="card-header"><i class="fa fa-area-chart"></i> Product Content </div>
+<div class="card-body">
+<form class="form-vertical" role="form">
+    <div class="row">
+        <div class="col-sm-10">
+            <div class="input-group">
+                <input class="form-control" type="text" placeholder="标题，作者">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button"><i class="fa fa-search" aria-hidden="true"></i> 搜索</button>
+                </span>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="input-group pull-right">
+                <button class="btn btn-success" type="button" (click)="goToWrite()">发表文章</button>
+            </div>
+        </div>
+    </div>
+</form>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="post-item-container">
+            <p-dataTable [value]="productList" [rows]="10" [paginator]="true" [pageLinks]="3" [rowsPerPageOptions]="[5,10,20]" (onRowSelect)="onRowSelect($event)" (onRowUnselect)="onRowUnselect($event)" dataKey="pid">
+                <p-column [style]="{'width':'38px'}" selectionMode="multiple"></p-column>
+                <p-column (click)="editPost()" field="pid" header="序号" [sortable]="true"></p-column>
+                <p-column field="name" header="名字" [sortable]="true" [editable]="true"></p-column>
+                <p-column field="skill" header="技术" [sortable]="true" [editable]="true"></p-column>
+                <p-column field="create_time" header="日期" [sortable]="true" [editable]="true"></p-column>
+                <p-column>
+                  <ng-template pTemplate="header">
+                       <span>操作</span>
+                  </ng-template>
+                  <ng-template let-product="rowData" pTemplate="body">
+                      <button  type="button" pButton (click)="editProduct(product)"><i class="fa fa-edit"></i></button>
+                  </ng-template>
+              </p-column>
+            </p-dataTable>
+        </div>
+    </div>
+</div>
+</div>
+</div>

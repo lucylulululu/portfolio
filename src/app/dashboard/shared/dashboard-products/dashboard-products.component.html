@@ -1,0 +1,25 @@
+<section class="section--center mdl-grid site-max-width">
+   <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card" *ngFor="let product of productList; let i = index">
+      <div class="mdl-card__media">
+         <img class="article-image" src="{{product.logo}}" border="0" alt="">
+      </div>
+      <div class="mdl-card__title">
+         <h2 class="mdl-card__title-text"><a class="card_title_link" [routerLink]="['/product/productdetail',product.pid]" href="portfolio-page.html">
+           {{product.name}}
+         </a></h2>
+      </div>
+      <div class="mdl-card__supporting-text">
+         <div ngswitch="product?.state">
+            <!-- <p ng-switch-when="0"><i class="fa fa-bar-chart-o product-icon"></i>Complete</p> -->
+            <p ng-switch-when="1"><i class="fa fa-bar-chart-o product-icon"></i>In progress</p>
+         </div>
+         <p><i class="fa fa-user product-icon"></i>{{product.role}}</p>
+         <p><i class="fa fa-code-fork product-icon"></i>{{product.skill}}</p>
+         <p><i class="fa fa-calendar product-icon"></i>{{product.create_time}}</p>
+         <br/>
+      </div>
+   </div>
+</section>
+<section class="section--center mdl-grid site-max-width homepage-portfolio">
+   <a [routerLink]="['/product']" class="mdl-button mdl-button--raised mdl-js-button mdl-js-ripple-effect mdl-button--accent" >View More</a>
+</section>

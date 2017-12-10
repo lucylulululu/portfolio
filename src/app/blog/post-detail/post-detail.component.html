@@ -1,0 +1,22 @@
+<div class="site-content">
+   <div class="mdl-grid site-max-width">
+    <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp page-content">
+        <div class="post-detail-container">
+        	<div class="row">
+        		<div class="col-sm-12">
+        			<h4>{{ post.data?.title }}</h4>
+              <p>
+                  <i class="fa fa-clock-o post-icon-text"></i>{{post.data?.create_time}}
+                  <i class="fa fa-folder-open-o post-icon post-icon-text"></i>{{post.data?.type}}
+                  <i class="fa fa-user post-icon post-icon-text"></i>{{post.data?.uname}}
+              </p>
+        		</div>
+        	</div>
+        	<div class="row">
+        		<div class="col-sm-12" [innerHTML]="post.data?.content">
+        		</div>
+        	</div>
+        </div>
+      </div>
+    </div>
+</div>

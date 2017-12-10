@@ -1,0 +1,26 @@
+<div class="site-content">
+  <div class="container">
+     <div class="mdl-grid site-max-width">
+        <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card" *ngFor="let product of productList; let i = index">
+              <div class="mdl-card__media">
+                  <img class="article-image" src="{{product?.logo}}" border="0" alt="">
+              </div>
+              <div class="mdl-card__title">
+                  <h2 class="mdl-card__title-text">{{product?.name}}</h2>
+              </div>
+              <div class="mdl-card__supporting-text">
+                 <p ngif="product.state==1"><i class="fa fa-bar-chart-o product-icon"></i>In progress</p>
+                 <p><i class="fa fa-user product-icon"></i>{{product.role}}</p>
+                 <p><i class="fa fa-code-fork product-icon"></i>{{product.skill}}</p>
+                 <p><i class="fa fa-calendar product-icon"></i>{{product.create_time}}</p>
+                 <br/>
+              </div>
+               <div class="mdl-card__actions mdl-card--border">
+                <a [routerLink]="['/product/productdetail',product.pid]" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="portfolio-page.html">
+                  Learn More
+                </a>
+              </div>
+          </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="site-login-row mdl-layout--large-screen-only">
+  <label>
+    <select #langSelect (change)="changeLang(langSelect.value)"  class="language-select">
+      <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+    </select>
+  </label>
+  <div id="login_container"></div>
+  <!-- <a href="/auth/twitter" class="btn btn-info"><span class="fa fa-twitter"></span> Twitter</a> -->
+</div>

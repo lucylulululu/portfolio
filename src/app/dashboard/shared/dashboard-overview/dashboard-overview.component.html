@@ -1,0 +1,33 @@
+<div class="mdl-grid site-max-width">
+   <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp welcome-card portfolio-card">
+      <div class="mdl-card__title">
+        <swiper [config]="config">
+               <div class="swiper-wrapper">
+                 <img class="swiper-slide" src="assets/img/cover.jpg">
+                 <img class="swiper-slide" src="assets/img/contact.jpg">
+                 <img class="swiper-slide" src="assets/img/about.jpg">
+               </div>
+               <!-- Add Pagination -->
+               <div class="swiper-pagination"></div>
+               <!-- Add Arrows -->
+               <div class="swiper-button-next"></div>
+               <div class="swiper-button-prev"></div>
+         </swiper>
+      </div>
+      <br />
+      <div class="mdl-card__supporting-text">
+      <p>This portfolio website includes below features:</p>
+          <p>•	Home Page </p>
+          <p>•	Product Page - Display product card list and product detail page</p>
+          <p>•	Blog Page - Display Blog list , pagination and blog detail page</p>
+          <p>•	About Page</p>
+          <p>•	Contact Page - Send Email with form note data</p>
+      </div>
+      <div class="mdl-card__actions mdl-card--border">
+         <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent"
+              [routerLink]="['/blog/postdetail',3]" >
+         More Info >>>
+         </a>
+      </div>
+   </div>
+</div>

@@ -1,0 +1,39 @@
+<div class="site-content">
+   <div class="mdl-grid site-max-width">
+      <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp page-content">
+         <div class="mdl-card__title">
+            <h1 class="mdl-card__title-text">Contact</h1>
+         </div>
+         <div class="mdl-card__media"><img class="article-image" src="assets/img/contact.jpg" border="0" alt="Contact">
+         </div>
+         <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--12-col">
+               <div class="mdl-card__supporting-text">
+                  <p>Contact our team using the contact form below:</p>
+                  <form #form="ngForm" novalidate role="form" (ngSubmit)="form.form.valid && sendEmail()"  class="form-contact">
+                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input placeholder="Name" required [(ngModel)]="contact.name" #userName="ngModel" class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="Name" name="name">
+                        <span *ngIf="form.submitted && !userName.valid" class="mdl-textfield__error">Letters and spaces only</span>
+                     </div>
+                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input placeholder="Email" required  name="email" [(ngModel)]="contact.email" #userEmail="ngModel" class="mdl-textfield__input" type="text" id="Email">
+                     </div>
+                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <textarea placeholder="Note" required  name="note" [(ngModel)]="contact.note" #userNote="ngModel" class="mdl-textfield__input" type="text" rows="5" id="note"></textarea>
+                     </div>
+                     <p>
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit">
+                        Submit
+                        </button>
+                     </p>
+                  </form>
+                  <br />
+                  <p><i class="fa fa-mail-reply-all post-icon-text"></i>Email : </p>
+                  <p><i class="fa fa-skype post-icon-text"></i>Skype :</p>
+                  <p><i class="fa fa-wechat post-icon-text"></i>Wechat : </p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

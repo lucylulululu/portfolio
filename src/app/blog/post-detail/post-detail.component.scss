@@ -1,0 +1,19 @@
+.post-detail-container{
+	margin-bottom:30px;
+  padding: 20px;
+  .post-icon {
+    padding-left : 20px;
+  }
+  .post-icon-text {
+    padding-right : 10px;
+    color: rgba(0,0,0,.54);
+  }
+  .content {
+    width: 95%;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+    -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+    font-size: 1rem;
+  }
+}

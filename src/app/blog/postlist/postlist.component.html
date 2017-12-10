@@ -1,0 +1,38 @@
+<div class="site-content">
+   <div class="mdl-grid site-max-width">
+    <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp page-content">
+     <div class="mdl-card__title">
+      <h1 class="mdl-card__title-text">BLOG</h1>
+     </div>
+     <div class="post-list-container">
+       <form class="form-vertical" role="form">
+           <div class="row">
+               <div class="col-sm-10">
+                   <div class="input-group">
+                       <input class="form-control" type="text" placeholder="Search" [(ngModel)]="searchText" (keyup)="searchChanged($event)" (change)="searchChanged($event)" id="searchText" name="searchText">
+                   </div>
+               </div>
+           </div>
+       </form>
+        <div class="post-item-container" *ngFor="let post of postList; let i = index">
+            <h4>
+                <a [routerLink]="['/blog/postdetail',post.bid]">{{post.title}}</a>
+            </h4>
+            <p>
+                <i class="fa fa-clock-o post-icon-text"></i>{{post.create_time}}
+                <i class="fa fa-folder-open-o post-icon post-icon-text"></i>{{post.type}}
+                <i class="fa fa-user post-icon post-icon-text" ></i>{{post.uname}}
+            </p>
+            <div class="comment_inner">
+                <div [innerHTML] = "post.content"></div>
+            </div>
+        </div>
+        <p-paginator class="ui-paginator ui-widget ui-widget-header ui-unselectable-text" rows="{{itemsPerPage}}"
+                     totalRecords="{{totalRecords}}"
+                     first="{{offset}}"
+                     (onPageChange)="pageChanged($event)">
+        </p-paginator>
+    </div>
+   </div>
+  </div>
+</div>
