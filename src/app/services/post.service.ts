@@ -6,12 +6,11 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
 import { Post } from '../model/post';
-import { REST_API } from './api';
 
 @Injectable()
 export class PostService {
-  public postURL = REST_API.endpoint + `/api/blog/`;
-  public postTopListURL = REST_API.endpoint + `/api/blog/?top=3`;
+  public postURL = `/api/blog/`;
+  public postTopListURL = `/api/blog/?top=3`;
 
   constructor(private http: Http) {
   }

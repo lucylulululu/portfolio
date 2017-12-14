@@ -1,11 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Http, Response, Headers } from '@angular/http';
 
-import { REST_API } from './api';
-
 @Injectable()
 export class UtilityService {
-  public sendEmailURL = REST_API.endpoint + `/api/mail/`;
+  public sendEmailURL =  `/api/mail/`;
 
   constructor(public http:Http){}
 

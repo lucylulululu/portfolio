@@ -5,11 +5,10 @@ import { Http, Headers, Response } from '@angular/http';
 import { User } from '../model/user';
 
 import 'rxjs/add/operator/map';
-import { REST_API } from './api';
 
 @Injectable()
 export class UserService {
-  public userLoginURL = REST_API.endpoint + `/api/user/`;
+  public userLoginURL =  `/api/user/`;
   public userLoginFacebookURL = 'http://localhost:8899/auth/facebook';
   public subject: Subject<User> = new Subject<User>();
 

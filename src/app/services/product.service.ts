@@ -6,12 +6,11 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
 import { Product} from '../model/product';
-import { REST_API } from './api';
 
 @Injectable()
 export class ProductService {
-  public productURL = REST_API.endpoint + `/api/product/`;
-  public productTopListURL = REST_API.endpoint + `/api/product/?top=3`;
+  public productURL =  `/api/product/`;
+  public productTopListURL = `/api/product/?top=3`;
 
   constructor(private http: Http) {
   }
