@@ -4,7 +4,7 @@ import { Http, Response, Headers } from '@angular/http';
 
 @Injectable()
 export class UtilityService {
-  public sendEmailURL = 'http://127.0.0.1:8360/api/mail/';
+  public sendEmailURL = `/api/mail/`;
 
   constructor(public http:Http){}
 

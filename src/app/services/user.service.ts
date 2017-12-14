@@ -8,7 +8,7 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class UserService {
-  public userLoginURL = 'http://127.0.0.1:8360/api/user/';
+  public userLoginURL = `/api/user/`;
   public userLoginFacebookURL = 'http://localhost:8899/auth/facebook';
   public subject: Subject<User> = new Subject<User>();
 

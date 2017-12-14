@@ -9,8 +9,8 @@ import { Product} from '../model/product';
 
 @Injectable()
 export class ProductService {
-  public productURL = 'http://127.0.0.1:8360/api/product/';
-  public productTopListURL = 'http://127.0.0.1:8360/api/product/?top=3';
+  public productURL = `/api/product/`;
+  public productTopListURL = `/api/product/?top=3`;
 
   constructor(private http: Http) {
   }
