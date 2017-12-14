@@ -1,11 +1,28 @@
-# MeanApp
+# Portfolio App
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
+This project was generated with [angular-cli](https://github.com/angular/angular-cli) 
 
 ## Code styles
 Following John Papa course and angular2 code styles
 https://www.pluralsight.com/courses/angular-2-first-look
 https://github.com/johnpapa/angular-first-look-hosted
+
+## This portfolio website includes below features :
+
+Home Page 
+Product Page - Display product card list and product detail page
+Blog Page - Display Blog list , pagination and blog destail page
+About Page
+Contact Page - Send Email with form note data
+
+#### Admin Module 
+Login Page 
+Manage Product Page - Product list table , pagination and edit product 
+Write Product Page - Publish product content using CKEditor
+Manage Blog Page - Blog list table , pagination and edit blog
+Write Blog Page - Publish blog content using CKEditor
+
+Angular4 , Typescript , Rxjs , Primeng, CKEditor4 
 
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
