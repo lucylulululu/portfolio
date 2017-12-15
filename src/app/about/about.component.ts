@@ -17,7 +17,7 @@ export class AboutComponent  implements OnInit {
     this.userService
         .getUser(1)
         .subscribe(
-          data => this.user = data,
+          data => this.user = data["data"],
           error => console.error(error)
         );
   }

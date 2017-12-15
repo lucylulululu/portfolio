@@ -27,7 +27,7 @@ export class ProductDetailComponent implements OnInit {
     this.productService
         .getProduct(id)
         .subscribe(
-          data => this.product = data,
+          data => this.product = data["data"],
           error => console.error(error)
         );
   }
