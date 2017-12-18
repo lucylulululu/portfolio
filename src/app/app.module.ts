@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpModule, Http } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { RouterModule } from '@angular/router';
+import { RouterModule , PreloadAllModules } from '@angular/router';
 import { appRoutes } from './app.routes';
 
 import { SharedModule } from './shared/shared.module';
@@ -27,7 +27,7 @@ import { AdminLayoutComponent } from './admin-layout/admin-layout.component';
     BrowserModule,
     HttpModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(appRoutes),
+    RouterModule.forRoot(appRoutes, {preloadingStrategy: PreloadAllModules}),
     SharedModule
   ],
   providers: [LocalStorage],

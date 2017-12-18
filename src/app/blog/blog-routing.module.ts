@@ -6,13 +6,13 @@ import { PostDetailComponent } from './post-detail/post-detail.component';
 
 const routes: Routes = [
   {
-    path:'',
-    redirectTo:'page/1',
-    pathMatch:'full'
+    path: '',
+    redirectTo: 'page/1',
+    pathMatch: 'full'
   },
   {
-    path:'page/:page',
-    component:PostlistComponent
+    path: 'page/:page',
+    component: PostlistComponent
   },
   {
     path: 'postdetail/:bId',
@@ -27,4 +27,4 @@ const routes: Routes = [
 })
 export class BlogRoutingModule { }
 
-export const routedComponents = [PostlistComponent,PostDetailComponent];
+export const routedComponents = [PostlistComponent, PostDetailComponent];
