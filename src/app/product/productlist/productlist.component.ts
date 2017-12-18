@@ -9,7 +9,7 @@ import { Product} from '../../model/product';
   styleUrls: ['./productlist.component.scss']
 })
 export class ProductlistComponent  implements OnInit {
-  public productList:Array<Product>;
+  public productList: Array<Product>;
 
   constructor(public router: Router,
       public activeRoute: ActivatedRoute,
@@ -19,8 +19,8 @@ export class ProductlistComponent  implements OnInit {
   ngOnInit() {
 
     return this.productService.getAllProducts().subscribe(
-      res=>{
-        this.productList = res["data"];
+      res => {
+        this.productList = res['data'];
       },
       error => {console.log(error)},
       () => {}

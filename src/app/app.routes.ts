@@ -6,11 +6,11 @@ import { LayoutComponent } from './layout/layout.component';
 import { AdminLayoutComponent } from './admin-layout/admin-layout.component';
 import { UploadComponent } from './shared/upload/upload.component';
 
-export const appRoutes=[
+export const appRoutes = [
   {
-    path:'',
+    path: '',
     component : LayoutComponent,
-    children :[
+    children : [
       {
         path: '',
         redirectTo: 'dashboard',
@@ -47,9 +47,9 @@ export const appRoutes=[
     component: UserLoginComponent
   },
   {
-    path:'',
+    path: '',
     component : AdminLayoutComponent,
-    children :[ {
+    children : [ {
         path: 'admin',
         loadChildren: 'app/admin/admin.module#AdminModule'
     }]
