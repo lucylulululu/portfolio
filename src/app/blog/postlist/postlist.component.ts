@@ -1,13 +1,20 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute, Router, Params } from '@angular/router';
-import { Subject } from 'rxjs/Subject';
-import { PostService } from '../../services/post.service';
-import { Post } from '../../model/post';
-import { Observable } from 'rxjs/Rx';
+import { Component, OnDestroy, OnInit } from "@angular/core";
+import { ActivatedRoute, Router, Params } from "@angular/router";
+
+import { Observable } from "rxjs/Rx";
+import { Subject } from "rxjs/Subject";
+
+
+import { PostService } from "../../services/post.service";
+import { Post } from "../../model/post";
+
+import "rxjs/add/operator/debounceTime";
+import "rxjs/add/operator/map";
+import "rxjs/add/operator/distinctUntilChanged";
 
 @Component({
-  templateUrl: './postlist.component.html',
-  styleUrls: ['./postlist.component.scss']
+  templateUrl: "./postlist.component.html",
+  styleUrls: ["./postlist.component.scss"]
 })
 export class PostlistComponent  implements OnInit {
   public itemsPerPage = 5;
@@ -34,12 +41,11 @@ export class PostlistComponent  implements OnInit {
     });
 
     this.searchTextStream
-        .debounceTime(500)
-        .distinctUntilChanged()
-        .subscribe(searchText => {
-      console.log('subscribe load data' + this.searchText);
-          this.loadData(this.searchText)
-        });
+      .debounceTime(500)
+      .distinctUntilChanged()
+      .subscribe(searchText => {
+        this.loadData(this.searchText)
+      });
   }
 
   public loadData(searchText: string) {
@@ -52,9 +58,9 @@ export class PostlistComponent  implements OnInit {
     }
   return this.postService.getPostList(searchText, this.currentPage).subscribe(
   res => {
-        this.totalRecords = res['data'].length;
-        this.cache_postList = res['data'];
-  this.postList = res['data'].slice(this.offset, this.end > this.totalRecords ? this.totalRecords : this.end);
+        this.totalRecords = res["data"].length;
+        this.cache_postList = res["data"];
+  this.postList = res["data"].slice(this.offset, this.end > this.totalRecords ? this.totalRecords : this.end);
   },
   error => {console.log(error)},
   () => {}
@@ -63,7 +69,7 @@ export class PostlistComponent  implements OnInit {
 
   public pageChanged(event: any): void {
   const temp = parseInt(event.page) + 1;
-  this.router.navigateByUrl('blog/page/' + temp);
+  this.router.navigateByUrl("blog/page/" + temp);
   }
 
   public searchChanged($event): void {
@@ -71,7 +77,7 @@ export class PostlistComponent  implements OnInit {
   }
 
   public gotoWrite(): void {
-  this.router.navigateByUrl('user/write');
+  this.router.navigateByUrl("user/write");
   }
 
 }
