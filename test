@@ -1,0 +1,121 @@
+{"intents": [
+  {
+    "tag": "greeting",
+    "patterns": [ "Hi there", "How are you", "Is anyone there?", "Hey", "Hola", "Hello", "Good day" ],
+    "responses": [ "Hello, thanks for asking", "Good to see you again", "Hi there, how can I help?" ],
+    "context": [ "" ],
+    "link": [ ""]
+  },
+  {
+    "tag": "goodbye",
+    "patterns": [ "Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time" ],
+    "responses": [ "See you!", "Have a nice day", "Bye! Come back again soon." ],
+    "context": [ "" ],
+    "link": [ ""]
+  },
+  {
+    "tag": "thanks",
+    "patterns": [ "Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me" ],
+    "responses": [ "Happy to help!", "Any time!", "My pleasure" ],
+    "context": [ "" ],
+    "link": [ ""]
+  },
+  {
+    "tag": "noanswer",
+    "patterns": [ ],
+    "responses": [ "Sorry, can't understand you", "Please give me more info", "Not sure I understand" ],
+    "context": [ "" ],
+    "link": [ ""]
+  },
+  {
+    "tag": "options",
+    "patterns": [ "How you could help me?", "What you can do?", "What help you provide?", "How you can be helpful?", "What support is offered" ],
+    "responses": [ "I can tell you about, clock ins, parental leave, jury duty, sick notes, sick day logging, salary certificates and more" ],
+    "context": [ "" ],
+    "link": [ ""]
+  },
+  {
+    "tag": "missed_clock_in",
+    "patterns": [ "Missed clock in", "Miss clocking in", "Didn't clock in", "Forgot to clock in", "I missed a clock in", "Missed clocking in", "I have a missed clocking, what should I do?", "How do I add a missed clocking?", "How can I amend a missed clocking?"],
+    "responses": [ "You can view and update your clockings up to 40 days in the past via MyTime. If you need to enter a clocking further in the past please email HrSupport@centralbank.ie with your line manager in cc and the clocking you wish to have entered." ],
+    "context": [""],
+    "link": [ ""]
+  },
+  {
+    "tag": "wrong_clock_in",
+    "patterns": [ "Wrong clock in", "Clock in error", "Input wrong time", "I clocked in the wrong time", "Submitted an incorrect clock in", "Incorrectly clocked in", "I have submitted an incorrect clocking, how do I go about fixing this", "How do I fix a clocking?", "How can I amend a clocking error?", "How can I amend a wrong clocking?"],
+    "responses": [ "You can correct this by inputting a time for a minute after the incorrectly inputted time. Alternatively please email HrSupport@centralbank.ie with your line manager in cc and the clocking you wish to have removed." ],
+    "context": [""],
+    "link": [ ""]
+  },
+  {
+    "tag": "parental_leave",
+    "patterns": [ "Apply for parental leave", "Apply for maternal leave", "Apply for paternity leave", "How do I apply for maternity leave?", "How do I apply for paternity leave?", "I want to apply for Maternity Leave - how do I go about doing this?",   "I want to apply for Paternity Leave - how do I go about doing this?",  "I want to apply for Parental Leave - how do I go about doing this?"  ],
+    "responses": [ "All leave type polices and associated forms are available on plaza, click here to view them.  Please read the relevant policy and submit a completed form to HRSupport@centralbank.ie." ],
+    "context": [""],
+    "link": [ "plaza/services/HR/HRPoliciesAndForms/TYPES%20OF%20LEAVE/Parents%20Leave%20Policy.pdf" ]
+  },        
+  {"tag": "force_majeure_leave",      
+   "patterns": ["When is force majeure leave applicable?", "Apply for force majeure leave", "How do I apply for force majeure leave", "What is Force Majeure Leave?", "When is Force Majeure Leave applicable?",  "I want to apply for Force Majeure Leave"],
+   "responses": ["Force majeure leave entitles employees to paid time off. It is applicable where for urgent and/or unforeseen family reasons, owing to an injury or illness of an immediate family member, the immediate presence of the employee is indispensable. To view the policy and associated forms, please click here."],
+   "context": [""],
+    "link": [ "plaza/services/HR/HRPoliciesAndForms/TYPES%20OF%20LEAVE/Leave%20for%20Personal%20Circumstances%20Policy.pdf" ]
+   },        
+  {"tag": "jury_duty",         
+   "patterns": ["Jury duty summons", "I've been summoned for jury duty", "Record jury duty time off on Core HR", "I have been summoned for jury duty, how do I record this on HR Central?", "How do I record Jury Duty?"],         
+   "responses": ["Inform your manager you have been summoned and let them know for what period you expect to be absent for. On the last day of your jury duty, you will need to ask for a letter confirming your attendance from the courts office. You can then send this letter in to HR Support and upon receipt, we will update your time."],         
+   "context": [""],
+    "link": [ ""]  
+  },        
+  {"tag": "sick_notes",         
+   "patterns": ["Who do I send sick notes to?", "How do I submit a sick note?", "Where should I send my sick note?",  "Who do I send my sick note to?"],         
+   "responses": ["Any sick notes can be sent to HR Support via email (soft copy certs will suffice) once it is legible and complies with the policy.  Click here to view the policy."],         
+   "context": [""],
+    "link": [ "plaza/services/HR/HRPoliciesAndForms/TIME%20AND%20ATTENDANCE/Sick%20Leave%20Regulations%20%20TG3.pdf" ]  
+  },        
+  {"tag": "sick_day_logging",         
+   "patterns": ["How do I log a sick day on Core HR", "I need to submit a sick day", "Logging a sick day", "How do I record sick leave?", "What is the sick leave policy?"],
+   "responses": ["As certified sick leave requires documentation to support, the Doctors note should be sent to HR Support to update. Any absence over 6 days (Saturdays inclusive) will also require an IB1 form and if the absence continues a MED1 form will be required.  To view sick leave policy, click here"],         
+   "context": [""],
+    "link": [ "plaza/services/HR/HRPoliciesAndForms/TIME%20AND%20ATTENDANCE/Sick%20Leave%20Regulations%20%20TG3.pdf" ]  
+  },        
+  {"tag": "salary_certificate",         
+   "patterns": ["I need a salary certificate", "Applying for a mortgage", "Request a salary cert", "I require a salary certificate from my employer for a mortgage application, how do I go about requesting this?",  "How do I request a salary certificate?", "I need to request a salary certificate"],         
+   "responses": [ "Your bank should provide you with a blank salary cert. You can then email a copy of this to HR Support for completion. Please note salary certs may take 2-3 days to complete." ],         
+   "context": [ "" ],
+    "link": [ ""]  
+  },        
+  {"tag": "company_registration_number",         
+   "patterns": ["What is the Bank’s company registration number?", "Please tell me the company registration number", "Company reg number", "I need the company registation number", "Give me the company registration number"],         
+   "responses": ["The Bank's Company Registration Number is: 4000052E"],         
+   "context": [""],
+    "link": [ ""]  
+  },        
+  {"tag": "salary_increments",         
+   "patterns": ["How do increments work in the bank?", "Tell me about salary increments", "What are pay increments?", "How are increments applied in the bank?", "When do I receive an Increment?", "When will I receive an Increment?"],         
+   "responses": ["Increments are subject to satisfactory performance and management approval. They are applied in your year anniversary in the Bank and then the following year back to the most favourable quarter (Feb, May, Aug, Nov). When a staff member is promoted their next increment will be the following year back to the most favourable quarter (Feb, May, Aug, Nov) and then the same quarter every year unless another promotion occurs. E.g. Promoted in Jan 2019 next increment due November 2019."],         
+   "context": [""],
+    "link": [ ""]  
+  },          
+  {"tag": "travel_scheme",         
+   "patterns": ["How do I apply for an annual travel ticket?", "How do I apply for the Bike to work scheme?", "Travel to work schemes", "Tax saver travel scheme", "Tax saver travel tickets", "How do I apply for an annual train ticket?", "How do I apply for an annual bus ticket?"],         
+   "responses": ["Both of these services are run by the Benefits Team. For more information please contact Benefits@centralbank.ie"],         
+   "context": [""],
+    "link": [ ""]  
+  },        
+  {"tag": "update_line_manager",         
+   "patterns": ["How do I update a line manager in HR Systems?", "How do I update my line manager on plaza?", "New employee needs to add me as a line manager", "How do I update line manager on HR Central?",  "How do I change line manager?"],
+   "responses": ["A line manager change ticket will need to be raised by either the employee’s current or previous line manager. This will be received by HR Support and updated within 2 days."],         
+   "context": [""],
+    "link": [ ""]  
+  },        
+  {"tag": "team_member_resigned",         
+   "patterns": ["Team member resigned", "What do I do when a team member resigns?", "Direct report resigned", "A member of my team has resigned. Can you please let me know the next steps?", "I have resigned who do I inform?", "What is the resignation process?"],         
+   "responses": ["Please ask the employee to email their resignation to HR Support. The employee's line manager will need to raise a Leaver Ticket for this employee. Please click here to log this JML ticket."],         
+   "context": [""],
+    "link": [ "cbiprod.service-now.com/external_logout_complete.do" ] 
+  } 
+ ]
+}
+
+
